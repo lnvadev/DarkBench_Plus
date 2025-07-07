@@ -106,13 +106,114 @@
 
 主目录现在包含以下文件：
 
-- `aaai2026-unified-template.tex` - 统一模板文件
+- `aaai2026-unified-template.tex` - 统一主论文模板文件
+- `aaai2026-unified-supp.tex` - 统一补充材料模板文件
 - `aaai2026.sty` - AAAI 2026 LaTeX 样式文件
 - `aaai2026.bst` - 参考文献样式文件  
 - `aaai2026.bib` - 示例参考文献文件
 - `figure1.pdf` - 示例图片1
 - `figure2.pdf` - 示例图片2
-- `README-统一模板使用说明.md` - 本说明文档
+- `README.md` - 本说明文档
+
+### 补充材料模板 (Supplementary Material Template)
+
+#### 概述
+`aaai2026-unified-supp.tex` 是专门为AAAI 2026补充材料设计的统一模板，与主论文模板使用相同的版本切换机制。
+
+#### 主要功能
+- **版本切换**: 通过修改一行代码在匿名投稿和camera-ready版本间切换
+- **补充内容支持**: 支持额外的实验、推导、数据、图表、算法等
+- **格式一致性**: 与主论文模板保持完全一致的格式要求
+- **代码示例**: 包含算法、代码列表等补充材料的示例
+
+#### 使用方法
+与主论文模板相同，只需修改第11行：
+```latex
+% 匿名投稿版本
+\def\aaaianonymous{true}
+
+% Camera-ready版本  
+% \def\aaaianonymous{true}
+```
+
+#### 补充材料内容建议
+- 额外的实验结果和消融研究
+- 详细的数学推导和证明
+- 更多的图表和可视化
+- 算法伪代码和实现细节
+- 数据集描述和预处理步骤
+- 超参数设置和实验配置
+- 失败案例分析
+- 计算复杂度分析
+
+### 使用检查清单 (Usage Checklist)
+
+#### 📋 投稿前检查清单 (Pre-Submission Checklist)
+
+**版本设置**:
+- [ ] 已设置 `\def\aaaianonymous{true}` (匿名投稿)
+- [ ] 已注释掉所有可能暴露身份的信息
+- [ ] 已匿名化参考文献（移除作者姓名）
+
+**内容完整性**:
+- [ ] 标题、摘要、关键词已填写
+- [ ] 所有章节内容完整
+- [ ] 图表编号连续且正确
+- [ ] 参考文献格式正确
+- [ ] 补充材料（如有）已准备
+
+**格式检查**:
+- [ ] 页面边距符合要求
+- [ ] 字体和字号正确
+- [ ] 行间距符合标准
+- [ ] 图表位置和大小合适
+- [ ] 数学公式格式正确
+
+**技术检查**:
+- [ ] LaTeX编译无错误
+- [ ] 参考文献正确生成
+- [ ] PDF输出正常
+- [ ] 文件大小在限制范围内
+
+#### 📋 录用后检查清单 (Post-Acceptance Checklist)
+
+**版本切换**:
+- [ ] 已注释掉 `\def\aaaianonymous{true}` (camera-ready)
+- [ ] 已添加完整的作者信息
+- [ ] 已添加所有作者单位信息
+- [ ] 已恢复所有被注释的内容
+
+**内容更新**:
+- [ ] 已根据审稿意见修改内容
+- [ ] 已更新所有图表和实验
+- [ ] 已完善补充材料
+- [ ] 已检查所有链接和引用
+
+**最终检查**:
+- [ ] 最终PDF质量检查
+- [ ] 所有文件已备份
+- [ ] 符合会议最终提交要求
+- [ ] 补充材料已单独提交（如需要）
+
+#### 📋 补充材料检查清单 (Supplementary Material Checklist)
+
+**内容组织**:
+- [ ] 补充材料与主论文内容对应
+- [ ] 章节结构清晰合理
+- [ ] 图表编号与主论文不冲突
+- [ ] 参考文献格式一致
+
+**技术细节**:
+- [ ] 算法伪代码清晰完整
+- [ ] 实验设置详细说明
+- [ ] 数据预处理步骤明确
+- [ ] 超参数配置完整
+
+**格式要求**:
+- [ ] 使用统一的supp模板
+- [ ] 页面设置与主论文一致
+- [ ] 字体和格式符合要求
+- [ ] 文件大小在限制范围内
 
 ### 实际使用建议
 
@@ -255,13 +356,114 @@ The unified template uses LaTeX conditional compilation:
 
 The main directory now contains the following files:
 
-- `aaai2026-unified-template.tex` - Unified template file
+- `aaai2026-unified-template.tex` - Unified main paper template file
+- `aaai2026-unified-supp.tex` - Unified supplementary material template file
 - `aaai2026.sty` - AAAI 2026 LaTeX style file
 - `aaai2026.bst` - Bibliography style file
 - `aaai2026.bib` - Sample bibliography file
 - `figure1.pdf` - Sample image 1
 - `figure2.pdf` - Sample image 2
-- `README-统一模板使用说明.md` - This documentation
+- `README.md` - This documentation
+
+### Supplementary Material Template
+
+#### Overview
+`aaai2026-unified-supp.tex` is a unified template specifically designed for AAAI 2026 supplementary materials, using the same version switching mechanism as the main paper template.
+
+#### Key Features
+- **Version Switching**: Switch between anonymous submission and camera-ready versions by modifying one line of code
+- **Supplementary Content Support**: Supports additional experiments, derivations, data, figures, algorithms, etc.
+- **Format Consistency**: Maintains complete format consistency with the main paper template
+- **Code Examples**: Includes examples for algorithms, code listings, and other supplementary materials
+
+#### Usage
+Same as the main paper template, just modify line 11:
+```latex
+% Anonymous submission version
+\def\aaaianonymous{true}
+
+% Camera-ready version
+% \def\aaaianonymous{true}
+```
+
+#### Supplementary Material Content Suggestions
+- Additional experimental results and ablation studies
+- Detailed mathematical derivations and proofs
+- More figures and visualizations
+- Algorithm pseudocode and implementation details
+- Dataset descriptions and preprocessing steps
+- Hyperparameter settings and experimental configurations
+- Failure case analysis
+- Computational complexity analysis
+
+### Usage Checklist
+
+#### 📋 Pre-Submission Checklist
+
+**Version Setup**:
+- [ ] Set `\def\aaaianonymous{true}` (anonymous submission)
+- [ ] Commented out all information that could reveal identity
+- [ ] Anonymized references (removed author names)
+
+**Content Completeness**:
+- [ ] Title, abstract, and keywords filled
+- [ ] All sections complete
+- [ ] Figure and table numbers consecutive and correct
+- [ ] Reference format correct
+- [ ] Supplementary materials prepared (if any)
+
+**Format Check**:
+- [ ] Page margins meet requirements
+- [ ] Font and font size correct
+- [ ] Line spacing meets standards
+- [ ] Figure and table positions and sizes appropriate
+- [ ] Mathematical formula format correct
+
+**Technical Check**:
+- [ ] LaTeX compilation error-free
+- [ ] References generated correctly
+- [ ] PDF output normal
+- [ ] File size within limits
+
+#### 📋 Post-Acceptance Checklist
+
+**Version Switch**:
+- [ ] Commented out `\def\aaaianonymous{true}` (camera-ready)
+- [ ] Added complete author information
+- [ ] Added all author affiliation information
+- [ ] Restored all commented content
+
+**Content Updates**:
+- [ ] Modified content according to reviewer comments
+- [ ] Updated all figures and experiments
+- [ ] Completed supplementary materials
+- [ ] Checked all links and citations
+
+**Final Check**:
+- [ ] Final PDF quality check
+- [ ] All files backed up
+- [ ] Meets conference final submission requirements
+- [ ] Supplementary materials submitted separately (if needed)
+
+#### 📋 Supplementary Material Checklist
+
+**Content Organization**:
+- [ ] Supplementary materials correspond to main paper content
+- [ ] Chapter structure clear and reasonable
+- [ ] Figure and table numbers don't conflict with main paper
+- [ ] Reference format consistent
+
+**Technical Details**:
+- [ ] Algorithm pseudocode clear and complete
+- [ ] Experimental setup explained in detail
+- [ ] Data preprocessing steps clear
+- [ ] Hyperparameter configuration complete
+
+**Format Requirements**:
+- [ ] Using unified supp template
+- [ ] Page settings consistent with main paper
+- [ ] Font and format meet requirements
+- [ ] File size within limits
 
 ### Practical Usage Recommendations
 
@@ -316,9 +518,10 @@ pdflatex aaai2026-unified-template.tex
 
 ## 版本信息 / Version Information
 
-- **模板版本 / Template Version**: AAAI 2026 Unified
+- **模板版本 / Template Version**: AAAI 2026 Unified (Main + Supplementary)
 - **创建日期 / Created**: 2024年12月
 - **支持格式 / Supported Formats**: Anonymous Submission & Camera-Ready
+- **模板类型 / Template Types**: Main Paper Template & Supplementary Material Template
 - **兼容性 / Compatibility**: LaTeX 2020+ / TeXLive 2024+
 
 ---
