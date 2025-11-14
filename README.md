@@ -79,11 +79,6 @@ print(f"Chinese dataset: {len(df_zh)} samples")
 print(df_en.head())
 ```
 
-<div align="center">
-<img src="figure/fig4.png" width="800px">
-<p><em>Figure 4: Model Performance Comparison (Dark Pattern Trigger Rates)</em></p>
-</div>
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
